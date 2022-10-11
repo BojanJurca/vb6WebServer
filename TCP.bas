@@ -39,6 +39,7 @@ Private Declare Function WSAStartup Lib "ws2_32.dll" (ByVal wVersionRequested As
 Private Declare Function WSACleanup Lib "ws2_32.dll" () As Integer
 
 Private Const AF_INET As Integer = 2
+Public Const INADDR_ANY As Long = 0
 Private Const SOCK_STREAM  As Integer = 1
 Private Const SOCK_DGRAM As Integer = 2
 Private Const INVALID_SOCKET As Integer = -1
@@ -92,6 +93,7 @@ Declare Function ioctlsocket Lib "wsock32.dll" (ByVal S As Long, ByVal cmd As Lo
 Private Declare Function accept Lib "ws2_32.dll" (ByVal socket As Long, ByRef addr As SOCKADDR_IN, ByRef addrlen As Long) As Long
 Private Declare Function inet_ntoa Lib "ws2_32.dll" (ByVal inn As Long) As Long
 Private Declare Function lstrcpy Lib "kernel32" Alias "lstrcpyA" (ByVal lpString1 As String, ByVal lpString2 As Long) As Long
+Private Declare Function htonl Lib "ws2_32.dll" (ByVal netlong As Long) As Integer
 Private Declare Function ntohs Lib "ws2_32.dll" (ByVal netshort As Integer) As Integer
 
 Public Declare Function send Lib "ws2_32.dll" (ByVal socket As Long, ByVal buffer As String, ByVal BytesToSend As Integer, ByVal flags As Integer) As Integer
@@ -106,6 +108,7 @@ Global requestToStopVb6WebServer As Boolean
 
 
 Private Sub Main()
+
     
     ' ----- INITIALIZE -----
    
@@ -125,7 +128,11 @@ Private Sub Main()
     ' create listening socket
     i.sin_family = AF_INET
     i.sin_port = htons(vb6WebServerPort)
-    i.sin_addr = inet_addr(vb6WebServerIP)
+    i.sin_addr = htonl(INADDR_ANY)
+    frmVb6WebServer.serverIpAddress = "all available server addresses"
+        ' if you want server to use just a specific IP address use:
+        ' i.sin_addr = inet_addr(vb6WebServerIP)
+        ' frmVb6WebServer.serverIpAddress = vb6WebServerIP
     listeningSocket = socket(AF_INET, SOCK_STREAM, 0)
     If listeningSocket = INVALID_SOCKET Then
         frmVb6WebServer.errorMessage = "(listening) socket ERROR"

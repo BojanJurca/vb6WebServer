@@ -21,10 +21,11 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Public errorMessage As String
+Public serverIpAddress As String
 
 Private Sub Form_Activate()
     Print ""
-    Print "   " & App.Title & " is listening on " & vb6WebServerIP & ":" & vb6WebServerPort
+    Print "   " & App.Title & " is listening on " & serverIpAddress & ":" & vb6WebServerPort ' vb6WebServerIP
     If errorMessage > "" Then
         ForeColor = vbRed
         Print ""
