@@ -3,7 +3,7 @@ Attribute VB_Name = "mdlHTTP"
 '
 ' There are mainly HTTP things in this module.
 '
-' Bojan Jurca, 1.10.2022
+' Bojan Jurca, 10.10.2022
 
 Option Explicit
 

@@ -13,7 +13,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 ' Parameter class for provideHttpReplyContent function.
 '
-' Bojan Jurca, 1.10.2022
+' Bojan Jurca, 10.10.2022
 
 
 Option Explicit

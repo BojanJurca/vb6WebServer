@@ -9,7 +9,7 @@ Attribute VB_Name = "mdlWebContent"
 '
 ' See examples below
 '
-' Bojan Jurca, 1.10.2022
+' Bojan Jurca, 10.10.2022
 
 Option Explicit
 

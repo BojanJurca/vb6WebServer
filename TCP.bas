@@ -5,7 +5,7 @@ Attribute VB_Name = "mdlTCP"
 ' There are mainly TCP things in this module, a good source on Win32 APIs is here:
 ' http://www.jasinskionline.com/windowsapi/ref/i/ioctlsocket.html
 '
-' Bojan Jurca, 1.10.2022
+' Bojan Jurca, 10.10.2022
 
 Option Explicit
 

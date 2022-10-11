@@ -1,5 +1,5 @@
-frmVb6WebServer = 43, 25, 964, 548, , 26, 26, 837, 401, C
-mdlTCP = 33, 7, 912, 418, Z
+frmVb6WebServer = 43, 25, 964, 548, C, 26, 26, 837, 401, C
+mdlTCP = 33, 7, 912, 418, C
 mdlHTTP = 163, 125, 933, 417, 
 mdlWebContent = 78, 78, 891, 415, 
 clsHttpCnnParams = 26, 26, 855, 301, 
