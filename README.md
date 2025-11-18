@@ -21,7 +21,7 @@
 
 
 
-## Repositiry status
+## Repository status
 
 [![GitHub stars](https://img.shields.io/github/stars/BojanJurca/vb6WebServer?style=flat-square)](https://github.com/BojanJurca/vb6WebServer/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/BojanJurca/vb6WebServer?style=flat-square)](https://github.com/BojanJurca/vb6WebServer/network/members)
